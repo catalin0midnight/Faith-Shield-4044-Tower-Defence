@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Turrets VFX
+  m_EditorClassIdentifier: 
+  m_GroupName: Turrets VFX
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 81aec83dd7d804cbbabc7a66a6767ac9
+  m_SerializeEntries:
+  - m_GUID: a0996b93584d7415c9aff00c544802a0
+    m_Address: VFX/Bullet Tower Projectile.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 3aabbf1c6534742eba904a47c9c7710b
+    m_Address: VFX/LaserTower1Beam.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d327b1912a5f14cffba17adc14b967bb
+    m_Address: VFX/MachineGunProjectile.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: ba77b294ab57441d6a3c76e8776b1910, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: fa6d528bc28324cdbaf22efcc2d1c504, type: 2}
+    - {fileID: 11400000, guid: 61e7bd757473244c59209e4c38d3686f, type: 2}
