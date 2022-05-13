@@ -83,20 +83,20 @@ Material:
     - _DetailBlendMaxValue: 0.3
     - _DetailBlendMinValue: 0.2
     - _DetailBlendMode: 1
-    - _DetailCat: 0
+    - _DetailCat: 1
     - _DetailMaskInvertMode: 0
     - _DetailMaskMode: 0
     - _DetailMeshValue: 0
     - _DetailMode: 0
     - _DetailNormalValue: 0.5
     - _DetailTypeMode: 0
-    - _EmissiveCat: 0
+    - _EmissiveCat: 1
     - _EmissiveFlagMode: 0
     - _ExtrasPositionMode: 0
     - _FadeCameraValue: 1
     - _FadeGlancingValue: 0
     - _GlobalAlpha: 1
-    - _GlobalCat: 0
+    - _GlobalCat: 1
     - _GlobalColors: 1
     - _GlobalEmissive: 1
     - _GlobalOverlay: 1
@@ -121,7 +121,7 @@ Material:
     - _LayerMotionValue: 0
     - _LayerReactValue: 0
     - _LayerVertexValue: 0
-    - _MainCat: 0
+    - _MainCat: 1
     - _MainLightAngleValue: 8
     - _MainLightNormalValue: 0.5
     - _MainLightScatteringValue: 8
@@ -137,7 +137,7 @@ Material:
     - _MotionAmplitude_21: 0
     - _MotionAmplitude_22: 0
     - _MotionAmplitude_32: 0.2
-    - _MotionCat: 0
+    - _MotionCat: 1
     - _MotionScale_10: 0
     - _MotionScale_20: 0.2
     - _MotionScale_32: 20
@@ -153,7 +153,7 @@ Material:
     - _NoiseMaxValue: 1
     - _NoiseMinValue: 0
     - _NoiseScaleValue: 0.01
-    - _OcclusionCat: 0
+    - _OcclusionCat: 1
     - _OverlayMaskMaxValue: 0.55
     - _OverlayMaskMinValue: 0.45
     - _OverlayVariationValue: 0
@@ -170,7 +170,7 @@ Material:
     - _RenderSSR: 0
     - _RenderSpecular: 1
     - _RenderZWrite: 1
-    - _RenderingCat: 0
+    - _RenderingCat: 1
     - _SecondNormalValue: 1
     - _SecondOcclusionValue: 1
     - _SecondSmoothnessValue: 1

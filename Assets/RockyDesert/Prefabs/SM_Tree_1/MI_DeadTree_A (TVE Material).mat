@@ -11,6 +11,7 @@ Material:
   m_Shader: {fileID: 4800000, guid: d085bd08ca5fe5a4792e19b6523918c1, type: 3}
   m_ValidKeywords:
   - TVE_DETAIL_MODE_OFF
+  - TVE_VERTEX_DATA_BATCHED
   m_InvalidKeywords:
   - TVE_DETAIL_TYPE_VERTEX_BLUE
   m_LightmapFlags: 0
@@ -20,6 +21,7 @@ Material:
   stringTagMap:
     NatureRendererInstancing: true
     RenderType: AlphaTest
+    UseExternalSettings: true
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
@@ -98,7 +100,7 @@ Material:
     - _GlobalAlpha: 1
     - _GlobalCat: 1
     - _GlobalColors: 1
-    - _GlobalEmissive: 1
+    - _GlobalEmissive: 0
     - _GlobalOverlay: 1
     - _GlobalSize: 1
     - _GlobalWetness: 1
@@ -168,7 +170,7 @@ Material:
     - _RenderPriority: 0
     - _RenderQueue: 0
     - _RenderSSR: 0
-    - _RenderSpecular: 1
+    - _RenderSpecular: 0
     - _RenderZWrite: 1
     - _RenderingCat: 1
     - _SecondNormalValue: 1
@@ -192,7 +194,7 @@ Material:
     - _TranslucencyNormalValue: 0.1
     - _TranslucencyScatteringValue: 2
     - _TranslucencyShadowValue: 1
-    - _VertexDataMode: 0
+    - _VertexDataMode: 1
     - _VertexDynamicMode: 0
     - _VertexMasksMode: 0
     - _VertexOcclusionMaxValue: 1
@@ -211,7 +213,7 @@ Material:
     - _DetailBlendRemap: {r: 0, g: 0, b: 0, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
     - _EmissiveColor: {r: 0, g: 0, b: 0, a: 0}
-    - _EmissiveIntensityParams: {r: 1, g: 1, b: 1, a: 0}
+    - _EmissiveIntensityParams: {r: 0, g: 0, b: 1, a: 0}
     - _EmissiveUVs: {r: 1, g: 1, b: 0, a: 0}
     - _GradientColorOne: {r: 1, g: 1, b: 1, a: 1}
     - _GradientColorTwo: {r: 1, g: 1, b: 1, a: 1}
