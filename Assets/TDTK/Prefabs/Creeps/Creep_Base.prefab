@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 4558284745832086}
   - component: {fileID: 114762694574170050}
   - component: {fileID: 135486139462304478}
+  - component: {fileID: 4410872880981175814}
   m_Layer: 27
   m_Name: Creep_Base
   m_TagString: Untagged
@@ -420,6 +421,18 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.3
   m_Center: {x: 0, y: 0.3, z: 0}
+--- !u!114 &4410872880981175814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1460238369207030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1796364931596996
 GameObject:
   m_ObjectHideFlags: 0

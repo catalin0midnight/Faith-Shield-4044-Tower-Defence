@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4346853544380920}
   - component: {fileID: 114089636255029794}
   - component: {fileID: 135009265585979514}
+  - component: {fileID: 6315842600080932250}
   m_Layer: 27
   m_Name: Creep_Speeder
   m_TagString: Untagged
@@ -389,6 +390,18 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.3
   m_Center: {x: 0, y: 0.3, z: 0}
+--- !u!114 &6315842600080932250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1112299647736954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1267868704758310
 GameObject:
   m_ObjectHideFlags: 0

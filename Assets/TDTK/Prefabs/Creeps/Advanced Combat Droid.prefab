@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5794164109771620392}
   - component: {fileID: 5161510360371923022}
-  - component: {fileID: 2072722025824015600}
+  - component: {fileID: -2643251722413755772}
   m_Layer: 27
   m_Name: Advanced Combat Droid
   m_TagString: Untagged
@@ -376,7 +376,7 @@ MonoBehaviour:
     mulSpd: 0.5
     mulExp: 0.5
     mulRsc: 0.5
---- !u!114 &2072722025824015600
+--- !u!114 &-2643251722413755772
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

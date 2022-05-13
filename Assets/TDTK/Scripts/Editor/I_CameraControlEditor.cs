@@ -51,8 +51,8 @@ namespace TDTK{
 				EditorGUILayout.BeginHorizontal();
 					cont=new GUIContent(" - Zoom Limit:", "The limit of the camera zoom. This is effectively the local Z-axis position limit of the camera transform as a child of the camera pivot");
 					EditorGUILayout.LabelField(cont, GUILayout.Width(width));
-					instance.minZoomDistance=EditorGUILayout.FloatField(instance.minZoomDistance);
-					instance.maxZoomDistance=EditorGUILayout.FloatField(instance.maxZoomDistance);
+					//instance.minZoomDistance=EditorGUILayout.FloatField(instance.minZoomDistance);
+					//instance.maxZoomDistance=EditorGUILayout.FloatField(instance.maxZoomDistance);
 				EditorGUILayout.EndHorizontal();
 			
 			EditorGUILayout.Space();
@@ -155,7 +155,7 @@ namespace TDTK{
 			EditorGUILayout.Space();
 				
 				cont=new GUIContent("Avoid Clipping:", "Check to stop the camera from clipping through any objects and block the line-of-sight to the pivot\nThis require the objects to have collider to work.");
-				instance.avoidClipping=EditorGUILayout.Toggle(cont, instance.avoidClipping);
+				//instance.avoidClipping=EditorGUILayout.Toggle(cont, instance.avoidClipping);
 				
 			EditorGUILayout.Space();
 			

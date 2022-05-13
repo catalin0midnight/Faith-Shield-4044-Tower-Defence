@@ -174,6 +174,7 @@ GameObject:
   - component: {fileID: 2347426024104960801}
   - component: {fileID: 2347426024104960800}
   - component: {fileID: 3441832399524349670}
+  - component: {fileID: 8861706992981299052}
   m_Layer: 28
   m_Name: Laser Tower 4Guns
   m_TagString: Untagged
@@ -574,6 +575,18 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!114 &8861706992981299052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2347426024104960803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2347426024883113889
 GameObject:
   m_ObjectHideFlags: 0
@@ -2244,7 +2257,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 127214, guid: d4287a2e8ade3e34786f23a6ffd63800, type: 3}
       propertyPath: m_Name
-      value: SparksBlue (3)
+      value: SparksGreen
       objectReference: {fileID: 0}
     - target: {fileID: 127214, guid: d4287a2e8ade3e34786f23a6ffd63800, type: 3}
       propertyPath: m_IsActive
@@ -2310,6 +2323,10 @@ PrefabInstance:
       propertyPath: InitialModule.startSpeed.minScalar
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 19955336, guid: d4287a2e8ade3e34786f23a6ffd63800, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e90a9cd1e256e5c498b4fef7e3739908, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4287a2e8ade3e34786f23a6ffd63800, type: 3}
 --- !u!4 &802196160734648010 stripped
@@ -2326,7 +2343,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 127214, guid: d4287a2e8ade3e34786f23a6ffd63800, type: 3}
       propertyPath: m_Name
-      value: SparksBlue
+      value: SparksGreen
       objectReference: {fileID: 0}
     - target: {fileID: 127214, guid: d4287a2e8ade3e34786f23a6ffd63800, type: 3}
       propertyPath: m_IsActive
@@ -2392,6 +2409,10 @@ PrefabInstance:
       propertyPath: InitialModule.startSpeed.minScalar
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 19955336, guid: d4287a2e8ade3e34786f23a6ffd63800, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e90a9cd1e256e5c498b4fef7e3739908, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4287a2e8ade3e34786f23a6ffd63800, type: 3}
 --- !u!4 &1156529835694836672 stripped
@@ -2408,7 +2429,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 127214, guid: d4287a2e8ade3e34786f23a6ffd63800, type: 3}
       propertyPath: m_Name
-      value: SparksBlue (9)
+      value: SparksGreen
       objectReference: {fileID: 0}
     - target: {fileID: 127214, guid: d4287a2e8ade3e34786f23a6ffd63800, type: 3}
       propertyPath: m_IsActive
@@ -2474,6 +2495,10 @@ PrefabInstance:
       propertyPath: InitialModule.startSpeed.minScalar
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 19955336, guid: d4287a2e8ade3e34786f23a6ffd63800, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e90a9cd1e256e5c498b4fef7e3739908, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4287a2e8ade3e34786f23a6ffd63800, type: 3}
 --- !u!4 &1910633404563614039 stripped
@@ -2490,7 +2515,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 127214, guid: d4287a2e8ade3e34786f23a6ffd63800, type: 3}
       propertyPath: m_Name
-      value: SparksBlue (5)
+      value: SparksGreen
       objectReference: {fileID: 0}
     - target: {fileID: 127214, guid: d4287a2e8ade3e34786f23a6ffd63800, type: 3}
       propertyPath: m_IsActive
@@ -2556,6 +2581,10 @@ PrefabInstance:
       propertyPath: InitialModule.startSpeed.minScalar
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 19955336, guid: d4287a2e8ade3e34786f23a6ffd63800, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e90a9cd1e256e5c498b4fef7e3739908, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4287a2e8ade3e34786f23a6ffd63800, type: 3}
 --- !u!4 &4144654960954386442 stripped
@@ -2572,7 +2601,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 127214, guid: d4287a2e8ade3e34786f23a6ffd63800, type: 3}
       propertyPath: m_Name
-      value: SparksBlue (7)
+      value: SparksGreen
       objectReference: {fileID: 0}
     - target: {fileID: 127214, guid: d4287a2e8ade3e34786f23a6ffd63800, type: 3}
       propertyPath: m_IsActive
@@ -2638,6 +2667,10 @@ PrefabInstance:
       propertyPath: InitialModule.startSpeed.minScalar
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 19955336, guid: d4287a2e8ade3e34786f23a6ffd63800, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e90a9cd1e256e5c498b4fef7e3739908, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4287a2e8ade3e34786f23a6ffd63800, type: 3}
 --- !u!4 &4431488951488019976 stripped
@@ -2654,7 +2687,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 127214, guid: d4287a2e8ade3e34786f23a6ffd63800, type: 3}
       propertyPath: m_Name
-      value: SparksBlue (2)
+      value: SparksGreen
       objectReference: {fileID: 0}
     - target: {fileID: 127214, guid: d4287a2e8ade3e34786f23a6ffd63800, type: 3}
       propertyPath: m_IsActive
@@ -2720,6 +2753,10 @@ PrefabInstance:
       propertyPath: InitialModule.startSpeed.minScalar
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 19955336, guid: d4287a2e8ade3e34786f23a6ffd63800, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e90a9cd1e256e5c498b4fef7e3739908, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4287a2e8ade3e34786f23a6ffd63800, type: 3}
 --- !u!4 &4619310649902075808 stripped
@@ -2736,7 +2773,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 127214, guid: d4287a2e8ade3e34786f23a6ffd63800, type: 3}
       propertyPath: m_Name
-      value: SparksBlue (6)
+      value: SparksGreen
       objectReference: {fileID: 0}
     - target: {fileID: 127214, guid: d4287a2e8ade3e34786f23a6ffd63800, type: 3}
       propertyPath: m_IsActive
@@ -2802,6 +2839,10 @@ PrefabInstance:
       propertyPath: InitialModule.startSpeed.minScalar
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 19955336, guid: d4287a2e8ade3e34786f23a6ffd63800, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e90a9cd1e256e5c498b4fef7e3739908, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4287a2e8ade3e34786f23a6ffd63800, type: 3}
 --- !u!4 &5167436896493338277 stripped
@@ -2818,7 +2859,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 127214, guid: d4287a2e8ade3e34786f23a6ffd63800, type: 3}
       propertyPath: m_Name
-      value: SparksBlue (8)
+      value: SparksGreen
       objectReference: {fileID: 0}
     - target: {fileID: 127214, guid: d4287a2e8ade3e34786f23a6ffd63800, type: 3}
       propertyPath: m_IsActive
@@ -2884,6 +2925,10 @@ PrefabInstance:
       propertyPath: InitialModule.startSpeed.minScalar
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 19955336, guid: d4287a2e8ade3e34786f23a6ffd63800, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e90a9cd1e256e5c498b4fef7e3739908, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4287a2e8ade3e34786f23a6ffd63800, type: 3}
 --- !u!4 &6376640928264895300 stripped
@@ -2900,7 +2945,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 127214, guid: d4287a2e8ade3e34786f23a6ffd63800, type: 3}
       propertyPath: m_Name
-      value: SparksBlue (4)
+      value: SparksGreen
       objectReference: {fileID: 0}
     - target: {fileID: 127214, guid: d4287a2e8ade3e34786f23a6ffd63800, type: 3}
       propertyPath: m_IsActive
@@ -2966,6 +3011,10 @@ PrefabInstance:
       propertyPath: InitialModule.startSpeed.minScalar
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 19955336, guid: d4287a2e8ade3e34786f23a6ffd63800, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e90a9cd1e256e5c498b4fef7e3739908, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4287a2e8ade3e34786f23a6ffd63800, type: 3}
 --- !u!4 &7207025269920881329 stripped
@@ -2982,7 +3031,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 127214, guid: d4287a2e8ade3e34786f23a6ffd63800, type: 3}
       propertyPath: m_Name
-      value: SparksBlue (1)
+      value: SparksGreen
       objectReference: {fileID: 0}
     - target: {fileID: 127214, guid: d4287a2e8ade3e34786f23a6ffd63800, type: 3}
       propertyPath: m_IsActive
@@ -3048,6 +3097,10 @@ PrefabInstance:
       propertyPath: InitialModule.startSpeed.minScalar
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 19955336, guid: d4287a2e8ade3e34786f23a6ffd63800, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e90a9cd1e256e5c498b4fef7e3739908, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4287a2e8ade3e34786f23a6ffd63800, type: 3}
 --- !u!4 &8142445632039880487 stripped

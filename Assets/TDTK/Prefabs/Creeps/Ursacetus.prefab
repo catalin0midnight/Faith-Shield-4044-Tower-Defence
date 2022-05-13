@@ -41,7 +41,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4337539324788036271}
   - component: {fileID: 4337539324788036272}
-  - component: {fileID: 170197239}
+  - component: {fileID: 3803773188315879441}
   m_Layer: 27
   m_Name: Ursacetus
   m_TagString: Untagged
@@ -407,7 +407,7 @@ MonoBehaviour:
     mulSpd: 0.5
     mulExp: 0.5
     mulRsc: 0.5
---- !u!114 &170197239
+--- !u!114 &3803773188315879441
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
