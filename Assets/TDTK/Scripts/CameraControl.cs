@@ -64,9 +64,6 @@ namespace TDTK {
 		public float maxRotateAngle=89;
 		
 		
-		
-		
-		
 		private float currentZoom=0;
 		private Transform camT;
 		

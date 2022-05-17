@@ -1,65 +1,87 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraMovement: MonoBehaviour
+public class CameraMovement : MonoBehaviour
 {
-    [SerializeField]
-    private Camera cam;
 
     [SerializeField]
-    private float zoomStep, minCamSize, maxCamSize;
+    private Camera cam; //obiekt kamery
 
     [SerializeField]
-    private MeshRenderer mapRenderer;
+    private float zoomStep, minCamSize, maxCamSize; //zakres powiększenia
+
+    [SerializeField]
+    private SpriteRenderer mapRenderer;
+    private float mapMinX, mapMaxX, mapMinY, mapMaxY;
 
     private Vector3 dragOrigin;
 
-    private float mapMinX, mapMaxX, mapMinY, mapMaxY;
 
-
-    private void Start()
+    private void Awake()
     {
         mapMinX = mapRenderer.transform.position.x - mapRenderer.bounds.size.x / 2f;
         mapMaxX = mapRenderer.transform.position.x + mapRenderer.bounds.size.x / 2f;
 
-        mapMinY = mapRenderer.transform.position.z - mapRenderer.bounds.size.y / 2f;
-        mapMaxY = mapRenderer.transform.position.z + mapRenderer.bounds.size.y / 2f;
+        mapMinY = mapRenderer.transform.position.y - mapRenderer.bounds.size.y / 2f;
+        mapMaxY = mapRenderer.transform.position.y + mapRenderer.bounds.size.y / 2f;
     }
 
-    private void Update()
+
+    // Start is called before the first frame update
+    void Start()
+    {
+
+    }
+
+    // Update is called once per frame
+    void Update()
     {
         PanCamera();
     }
 
+    //przesuwanie pozycji kamery (lewo, prawo, góra, dół)
     private void PanCamera()
     {
-        if (Input.GetButtonDown("Fire1"))
-        {
+
+        if (Input.GetMouseButtonDown(0))
             dragOrigin = cam.ScreenToWorldPoint(Input.mousePosition);
-        }
 
-        if (Input.GetButton("Fire1"))
+        if (Input.GetMouseButton(0))
         {
-            Vector3 diff = dragOrigin - cam.ScreenToWorldPoint(Input.mousePosition);
+            Vector3 difference = dragOrigin - cam.ScreenToWorldPoint(Input.mousePosition);
+            print("origin " + dragOrigin + " newPosition " + cam.ScreenToWorldPoint(Input.mousePosition) + " =difference" + difference);
+            //cam.transform.position += difference; //bez ograniczenia obszaru
 
-            cam.transform.position = ClampCamera(cam.transform.position + diff);
+            cam.transform.position = ClampCamera(cam.transform.position + difference);   //ograniczenie obszaru
+
         }
 
-        if (Input.GetAxis("Mouse ScrollWheel") < 0f) // forward
+        /*
+        if (Input.GetMouseButtonDown(0)) dragOrigin = cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, cam.transform.position.z * -1));
+        if (Input.GetMouseButton(0))
         {
-            float newSize = cam.orthographicSize + zoomStep;
-            cam.orthographicSize = Mathf.Clamp(newSize, minCamSize, maxCamSize);
-            cam.transform.position = ClampCamera(cam.transform.position);
+            Vector3 difference = dragOrigin - cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, cam.transform.position.z * -1));
+            Debug.Log("origin " + dragOrigin + " newPosition " + cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, cam.transform.position.z * -1)) + " =difference " + difference);
+            cam.transform.position += new Vector3(difference.x, difference.y, 0f);
         }
-        else if (Input.GetAxis("Mouse ScrollWheel") > 0f) // backwards
-        {
-            float newSize = cam.orthographicSize - zoomStep;
-            cam.orthographicSize = Mathf.Clamp(newSize, minCamSize, maxCamSize);
-            cam.transform.position = ClampCamera(cam.transform.position);
-        }
+        */
+    }
 
+    public void ZoomIn()
+    {
+        float newSize = cam.orthographicSize - zoomStep;
+        cam.orthographicSize = Mathf.Clamp(newSize, minCamSize, maxCamSize);
+
+        cam.transform.position = ClampCamera(cam.transform.position);   //ograniczenie obszaru
+    }
+
+    public void ZoomOut()
+    {
+        float newSize = cam.orthographicSize + zoomStep;
+        cam.orthographicSize = Mathf.Clamp(newSize, minCamSize, maxCamSize);
+
+        cam.transform.position = ClampCamera(cam.transform.position); //ograniczenie obszaru
     }
 
     private Vector3 ClampCamera(Vector3 targetPosition)
@@ -73,8 +95,8 @@ public class CameraMovement: MonoBehaviour
         float maxY = mapMaxY - camHeight;
 
         float newX = Mathf.Clamp(targetPosition.x, minX, maxX);
-        float newY = Mathf.Clamp(targetPosition.z, minY, maxY);
+        float newY = Mathf.Clamp(targetPosition.y, minY, maxY);
 
-        return new Vector3(newX, targetPosition.y, newY);
+        return new Vector3(newX, newY, targetPosition.z);
     }
 }
