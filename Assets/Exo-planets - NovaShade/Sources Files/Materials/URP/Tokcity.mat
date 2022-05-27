@@ -2,14 +2,17 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 6
+  serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Tokcity
   m_Shader: {fileID: 4800000, guid: 9d0e4e3129daa3f40bb9131d515f3d2f, type: 3}
-  m_ShaderKeywords: _ENABLEATMOSPHERE_ON _ENABLECITIES_ON _ENABLECLOUDS_ON
+  m_ValidKeywords: []
+  m_InvalidKeywords:
+  - _ENABLEATMOSPHERE_ON
+  - _ENABLECLOUDS_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -28,11 +31,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _CloudsNormals:
-        m_Texture: {fileID: 2800000, guid: 8f8da48b88c08f14fb4f24347ce6850a, type: 3}
+        m_Texture: {fileID: 2800000, guid: f630a5adaf8f7d34ea82aae28512b1a7, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _CloudsTexture:
-        m_Texture: {fileID: 2800000, guid: fe657274ce6c5054bae359f68db92e1f, type: 3}
+        m_Texture: {fileID: 2800000, guid: c69ca91c5da35514c837c4e254f7f9d0, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Cloudz:
@@ -117,17 +120,17 @@ Material:
     - _CitiesDetail: 5
     - _CitiesSharpness: 1
     - _Citiesoffset: 0
-    - _CloudSpeed: 2
+    - _CloudSpeed: 5
     - _CloudsRelief: 1
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _EnableAtmosphere: 1
-    - _EnableCities: 1
+    - _EnableCities: 0
     - _EnableClouds: 1
     - _EnableLandLava: 0
     - _EnableWater: 0
-    - _EnumFloat: 2
+    - _EnumFloat: 1
     - _ExteriorIntensity: 0.38
     - _ExteriorSize: 0.254
     - _Float10: 1
@@ -136,20 +139,20 @@ Material:
     - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _IlluminationAmbient: 0.579
-    - _IlluminationBoost: 2
+    - _IlluminationBoost: 1
     - _IlluminationSmoothness: 4
-    - _InteriorIntensity: 0.6
-    - _InteriorSize: -2
+    - _InteriorIntensity: 0.75
+    - _InteriorSize: -1
     - _Metallic: 0
     - _Mode: 0
-    - _NormalsIntensity: 1
+    - _NormalsIntensity: 0.5
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _ReliefIntensity: 0.3
-    - _ReliefSmoothness: 2.24
+    - _ReliefIntensity: 0.075
+    - _ReliefSmoothness: 2
     - _ShadowsIntensity: 1
     - _ShadowsOffset: 0.0008
-    - _ShadowsSharpness: 3.95
+    - _ShadowsSharpness: 0
     - _ShadowsXOffset: -0.001
     - _ShadowsYOffset: 0.0084
     - _SmoothnessTextureChannel: 0
@@ -161,20 +164,20 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _AtmosphereColor: {r: 0.23529412, g: 0.23529412, b: 0.23529412, a: 0}
+    - _AtmosphereColor: {r: 0.5019608, g: 0.5019608, b: 0.5019608, a: 0}
     - _BaseColormodifier: {r: 1, g: 1, b: 1, a: 0}
     - _Citiescolor: {r: 6.8676434, g: 1.8027285, b: 0.33651468, a: 0}
     - _CloudShadowColor: {r: 0, g: 0.07058821, b: 0.3137255, a: 0}
     - _CloudShadows: {r: 0.05732999, g: 0.1026346, b: 0.315, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _ColorA: {r: 3.031433, g: 3.031433, b: 3.031433, a: 1}
+    - _ColorA: {r: 1.0259981, g: 0.776431, b: 0.69324195, a: 1}
     - _ColorTransparency: {r: 3.4808812, g: 3.4808812, b: 3.4808812, a: 0.39607844}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _EvenigColor: {r: 0.29799998, g: 0.10836363, b: 0, a: 0}
     - _IlluminationAmbient: {r: 0.098000005, g: 0.07494118, b: 0.06725491, a: 0}
     - _LightSource: {r: 7004.913, g: 7098.083, b: 0.029130807, a: 0}
     - _ShadowColor: {r: 0.07063498, g: 0.10829547, b: 0.255, a: 1}
-    - _ShadowColorA: {r: 0, g: 0, b: 0, a: 0.34117648}
+    - _ShadowColorA: {r: 0, g: 0, b: 0, a: 0.5019608}
     - _ShadowsColorIntensity: {r: 0.30828, g: 0.62634665, b: 0.734, a: 1}
     - _SkyblendA: {r: 0.55917996, g: 0.6696877, b: 0.766, a: 0}
     - _SunsetColor: {r: 0.3685, g: 0.55275, b: 0.737, a: 0}

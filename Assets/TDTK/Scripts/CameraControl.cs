@@ -57,8 +57,8 @@ namespace TDTK {
 		public float minPosZ=-10;
 		public float maxPosZ=10;
 		
-		public float minZoomDistance=8;
-		public float maxZoomDistance=30;
+		public float minOrthoCamSize=10;
+		public float maxOrthoCamSize=25;
 		
 		public float minRotateAngle=10;
 		public float maxRotateAngle=89;
@@ -77,7 +77,7 @@ namespace TDTK {
 		
 		void Start(){
 			camT=thisT.GetChild(0);//Camera.main.transform;
-			currentZoom=camT.localPosition.z;
+			currentZoom = Camera.main.orthographicSize;
 		}
 		
 		private float initialMousePosX;	private float initialRotX;
@@ -164,7 +164,7 @@ namespace TDTK {
 
 						// Find the difference in the distances between each frame.
 						float zoomInput = prevTouchDeltaMag - touchDeltaMag;
-						currentZoom=Mathf.Clamp(currentZoom+zoomSpeed*zoomInput*.1f, -maxZoomDistance, -minZoomDistance);
+						currentZoom=Mathf.Clamp(currentZoom+zoomSpeed*zoomInput*.1f, -maxOrthoCamSize, -minOrthoCamSize);
 					}
 				}
 				Zoom();
@@ -257,7 +257,7 @@ namespace TDTK {
 			
 			if(enableZoom){
 				float zoomInput=Input.GetAxis("Mouse ScrollWheel");
-				if(zoomInput!=0) currentZoom=Mathf.Clamp(currentZoom+zoomSpeed*zoomInput, -maxZoomDistance, -minZoomDistance);
+				if(zoomInput!=0) currentZoom=Mathf.Clamp(currentZoom+zoomSpeed*zoomInput, -maxOrthoCamSize, -minOrthoCamSize);
 				
 				Zoom();
 			}
@@ -277,7 +277,7 @@ namespace TDTK {
 		
 		
 		private void Zoom(){
-			if(avoidClipping){
+			/*if(avoidClipping){
 				Vector3 aPos=thisT.TransformPoint(new Vector3(0, 0, currentZoom));
 				Vector3 dirC=aPos-thisT.position;
 				float dist=Vector3.Distance(aPos, thisT.position); RaycastHit hit;
@@ -291,9 +291,54 @@ namespace TDTK {
 			}
 			
 			if(!avoidClipping || !hasObstacle){
-				currentZoom=Mathf.Clamp(currentZoom, -maxZoomDistance, -minZoomDistance);
+				currentZoom=Mathf.Clamp(currentZoom, -maxOrthoCamSize, -minOrthoCamSize);
 				float camZ=Mathf.Lerp(camT.localPosition.z, currentZoom, Time.deltaTime*4);
 				camT.localPosition=new Vector3(camT.localPosition.x, camT.localPosition.y, camZ);
+			}*/
+			if (Camera.main.orthographicSize < minOrthoCamSize)
+			{
+				Camera.main.orthographicSize = minOrthoCamSize;
+				zoomSpeed = 0f;
+				return;
+			}
+
+			if (Camera.main.orthographicSize > maxOrthoCamSize)
+			{
+				Camera.main.orthographicSize = maxOrthoCamSize;
+				zoomSpeed = 0f;
+				return;
+			}
+
+			if (
+				Camera.main.orthographicSize + zoomSpeed >= minOrthoCamSize &&
+				Camera.main.orthographicSize + zoomSpeed <= maxOrthoCamSize
+			)
+			{
+				Camera.main.orthographicSize += zoomSpeed;
+			}
+
+			zoomSpeed -= Input.GetAxis("Mouse ScrollWheel") * 2f;
+			zoomSpeed = Mathf.Lerp(zoomSpeed, 0f, Time.deltaTime * 5f);
+
+			if (Input.touchCount == 2)
+			{
+				Touch touch1 = Input.GetTouch(0);
+				Touch touch2 = Input.GetTouch(1);
+
+				// Find the position in the previous frame of each touch.
+				Vector2 touch1PrevPos = touch1.position - touch1.deltaPosition;
+				Vector2 touch2PrevPos = touch2.position - touch2.deltaPosition;
+
+				if (Vector2.Angle(touch1PrevPos, touch2PrevPos) < 15)
+				{
+					// Find the magnitude of the vector (the distance) between the touches in each frame.
+					float prevTouchDeltaMag = (touch1PrevPos - touch2PrevPos).magnitude;
+					float touchDeltaMag = (touch1.position - touch2.position).magnitude;
+
+					// Find the difference in the distances between each frame.
+					float zoomInput = prevTouchDeltaMag - touchDeltaMag;
+					currentZoom = Mathf.Clamp(currentZoom + zoomSpeed * zoomInput * .1f, -maxOrthoCamSize, -minOrthoCamSize);
+				}
 			}
 		}
 		
@@ -323,13 +368,13 @@ namespace TDTK {
 		public Vector2 GetLimitX(){
 			if(!linkPanLimitToZoom) return new Vector2(minPosX, maxPosX);
 			
-			float zoomRatio=1-(Mathf.Abs(camT.localPosition.z)-minZoomDistance)/(maxZoomDistance-minZoomDistance);
+			float zoomRatio=1-(Mathf.Abs(camT.localPosition.z)-minOrthoCamSize)/(maxOrthoCamSize-minOrthoCamSize);
 			return new Vector2(minPosX-zoomRatio*limitExtX_ZOut, maxPosX+zoomRatio*limitExtX_ZOut);
 		}
 		public Vector2 GetLimitZ(){
 			if(!linkPanLimitToZoom) return new Vector2(minPosZ, maxPosZ);
 			
-			float zoomRatio=1-(Mathf.Abs(camT.localPosition.z)-minZoomDistance)/(maxZoomDistance-minZoomDistance);
+			float zoomRatio=1-(Mathf.Abs(camT.localPosition.z)-minOrthoCamSize)/(maxOrthoCamSize-minOrthoCamSize);
 			return new Vector2(minPosZ-zoomRatio*limitExtZ_ZOut, maxPosZ+zoomRatio*limitExtZ_ZOut);
 		}
 		

@@ -62,7 +62,7 @@ namespace TDTK{
 				float x=(TDTK.GetWorldScale(thisT).x)/gridSize;
 				float y=(TDTK.GetWorldScale(thisT).y)/gridSize;
 				
-				mat.mainTextureOffset=new Vector2(0.5f, 0.5f);
+				mat.mainTextureOffset=new Vector2(1f, 1f);
 				mat.mainTextureScale=new Vector2(x, y);
 			}
 			

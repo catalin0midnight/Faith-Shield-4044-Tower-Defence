@@ -2,16 +2,26 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 6
+  serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Jaspey Atmosphere
   m_Shader: {fileID: 4800000, guid: 00fda4f1c0928ee42b752e09cdcf84c7, type: 3}
-  m_ShaderKeywords: _BLENDMODE_ADD _DISABLE_SSR _ENABLEATMOSPHERE1_ON _ENABLEATMOSPHERE_ON
-    _ENABLECITIES1_ON _ENABLECITIES_ON _ENABLECLOUDS1_ON _ENABLECLOUDS_ON _ENABLEWATER1_ON
-    _ENABLEWATER_ON _SURFACE_TYPE_TRANSPARENT
+  m_ValidKeywords: []
+  m_InvalidKeywords:
+  - _BLENDMODE_ADD
+  - _DISABLE_SSR
+  - _ENABLEATMOSPHERE1_ON
+  - _ENABLEATMOSPHERE_ON
+  - _ENABLECITIES1_ON
+  - _ENABLECITIES_ON
+  - _ENABLECLOUDS1_ON
+  - _ENABLECLOUDS_ON
+  - _ENABLEWATER1_ON
+  - _ENABLEWATER_ON
+  - _SURFACE_TYPE_TRANSPARENT
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -115,6 +125,7 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
     - _AddPrecomputedVelocity: 0
     - _AlphaClip: 0
@@ -137,7 +148,7 @@ Material:
     - _DoubleSidedEnable: 0
     - _DoubleSidedNormalMode: 2
     - _DstBlend: 1
-    - _EnableAtmosphere: 1
+    - _EnableAtmosphere: 0
     - _EnableAtmosphere1: 1
     - _EnableCities: 1
     - _EnableCities1: 1
@@ -147,9 +158,9 @@ Material:
     - _EnableWater1: 1
     - _EnumFloat: 1
     - _EnumFloat1: 0
-    - _ExteriorIntensity: 0.26
+    - _ExteriorIntensity: 0.1
     - _ExteriorIntensity1: 0.25
-    - _ExteriorSize: 0.26
+    - _ExteriorSize: 1
     - _ExteriorSize1: 0.313
     - _GlossMapScale: 1
     - _Glossiness: 0.5
@@ -206,7 +217,7 @@ Material:
     - _ZTestTransparent: 4
     - _ZWrite: 1
     m_Colors:
-    - _AtmosphereColor: {r: 1.7681755, g: 1.7681755, b: 1.7681755, a: 0}
+    - _AtmosphereColor: {r: 0.3584906, g: 0.3584906, b: 0.3584906, a: 1}
     - _AtmosphereColor1: {r: 0.3764706, g: 1.027451, b: 1.498039, a: 0}
     - _BaseColormodifier: {r: 1, g: 1, b: 1, a: 0}
     - _BaseColormodifier1: {r: 1, g: 1, b: 1, a: 0}

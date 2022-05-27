@@ -11,7 +11,7 @@ namespace TDTK{
 		public Path path;
 		public LineRenderer rend;
 		
-		[HideInInspector] public float scrollSpeed = 0.5F;
+		[SerializeField] private float scrollSpeed = 0.25F;
 		
 		private Path nextPath;
 		

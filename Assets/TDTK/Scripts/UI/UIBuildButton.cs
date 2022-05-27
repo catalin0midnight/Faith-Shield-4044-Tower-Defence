@@ -210,18 +210,18 @@ namespace TDTK{
 		}
 		
 		private Transform piePosDummyT;
-		public List<Vector3> GetPieMenuPos(float num, Vector3 screenPos, float cutoff=120, int size=70){
+		public List<Vector3> GetPieMenuPos(float num, Vector3 screenPos, float cutoff=120, int size=128){
 			List<Vector3> points=new List<Vector3>();
 			
 			if(num==1){
-				points.Add(screenPos+new Vector3(0, size, 0)*UI.GetScaleFactor());
+				points.Add(screenPos+new Vector3(-64, size, 0)*UI.GetScaleFactor());
 				return points;
 			}
 			
 			//if there's only two button to be displayed, then normal calculation doesnt apply
 			if(num<=2){
-				points.Add(screenPos+new Vector3(size, 10, 0)*UI.GetScaleFactor());
-				points.Add(screenPos+new Vector3(-size, 10, 0)*UI.GetScaleFactor());
+				points.Add(screenPos+new Vector3(size, 0, 0)*UI.GetScaleFactor());
+				points.Add(screenPos+new Vector3(-size, 0, 0)*UI.GetScaleFactor());
 				return points;
 			}
 			
