@@ -46,21 +46,40 @@ namespace TDTK{
 		public const string vol_SaveString_UI="TDTK_Volume_UI";
 		
 		public static float GetVolumeSFX(){
+#if UNITY_SWITCH && !UNITY_EDITOR
+			return SaveBridge.GetFloatPP(vol_SaveString_SFX, 1f);
+#else
 			return PlayerPrefs.GetFloat(vol_SaveString_SFX, 1f);
+#endif
 		}
+
 		public static void SetVolumeSFX(float value){
 			AudioListener.volume=value;
+#if UNITY_SWITCH && !UNITY_EDITOR
+			SaveBridge.SetFloatPP(vol_SaveString_SFX, value);
+#else
 			PlayerPrefs.SetFloat(vol_SaveString_SFX, value);
+#endif
 		}
 		
 		public static float GetVolumeUI(){
+#if UNITY_SWITCH && !UNITY_EDITOR
+			return SaveBridge.GetFloatPP(vol_SaveString_UI, 1f);
+#else
 			return PlayerPrefs.GetFloat(vol_SaveString_UI, 1f);
+#endif
+
 		}
 		public static void SetVolumeUI(float value){
 			if(instance!=null){
 				for(int i=0; i<instance.audioSourceList_UI.Count; i++) instance.audioSourceList_UI[i].volume=value;
 			}
+
+#if UNITY_SWITCH && !UNITY_EDITOR
+			SaveBridge.SetFloatPP(vol_SaveString_UI, value);
+#else
 			PlayerPrefs.SetFloat(vol_SaveString_UI, value);
+#endif 
 		}
 		
 		

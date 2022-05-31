@@ -3,6 +3,7 @@
 
 #if !REWIRED_DISABLE_UNITY_INPUT_OVERRIDE
 
+using System;
 /// <summary>
 /// Overrides the UnityEngine.Input class and re-routes GetButton and GetAxis calls to Rewired Player 0.
 /// This only works if scripts call Input without explicitly specifying UnityEngine.Input.
@@ -185,6 +186,11 @@ public static class Input {
     [System.Obsolete("isGyroAvailable property is deprecated. Please use SystemInfo.supportsGyroscope instead.")]
     public static bool isGyroAvailable { get { return UnityEngine.Input.isGyroAvailable; } }
 
+    public static int touchSupported(bool v)
+    {
+        throw new NotImplementedException();
+    }
+
 #if !REWIRED_UNITY_INPUT_OVERRIDE_DISABLE_LOCATION_SERVICE
     /// <summary>
     /// Property for accessing device location (handheld devices only). (Read Only)
@@ -281,15 +287,6 @@ public static class Input {
     /// Returns whether the device on which application is currently running supports touch input.
     /// </summary>
     /// <returns></returns>
-    public static bool touchSupported {
-        get {
-#if UNITY_5 || UNITY_5_3_OR_NEWER || (UNITY_4_6 || UNITY_4_7 || UNITY_4_8 || UNITY_4_9)
-            return UnityEngine.Input.touchSupported;
-#else
-            throw new System.NotSupportedException();
-#endif
-        }
-    }
 
     /// <summary>
     /// Returns specific acceleration measurement which occurred during last frame. (Does not allocate temporary variables).

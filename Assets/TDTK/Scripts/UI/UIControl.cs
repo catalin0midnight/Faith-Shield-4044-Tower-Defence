@@ -3,6 +3,8 @@ using System.Collections.Generic;
 
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
+using Rewired;
 
 namespace TDTK{
 
@@ -51,15 +53,16 @@ namespace TDTK{
 		[Space(10)][Tooltip("The reference width used in the canvas scaler\nThis value is used in calculation to get the overlays shows up in the right position")]
 		public float scaleReferenceWidth=1366;
 		public static float GetScaleReferenceWidth(){ return instance!=null ? instance.scaleReferenceWidth : 1366 ; }
-		
-		
-		
-		
-		
+
 		private static UIControl instance;
+
+		private Nintendo touchControls;
 		
-		void Awake(){
+		private void Awake()
+		{
 			instance=this;
+			UnityInputOverride.enabled = false;
+			touchControls = new Nintendo();
 		}
 		
 		// Use this for initialization
@@ -70,6 +73,9 @@ namespace TDTK{
 				Debug.LogWarning("PointNBuild mode is not supported when using FreeFormMode in TowerManager, changed to DragNDrop instead");
 				buildMode=_BuildMode.DragNDrop;
 			}
+
+			touchControls.Touch.TouchPress.started += ctx => StartTouch(ctx);
+			touchControls.Touch.TouchPress.canceled += ctx => EndTouch(ctx);
 		}
 		
 		void OnEnable(){
@@ -77,22 +83,30 @@ namespace TDTK{
 			TDTK.onNewAbilityE += OnNewAbility;
 			TDTK.onGameOverE += OnGameOver;
 			TDTK.onReplaceBuildableE += OnReplaceBuildable;
+			touchControls.Enable();
 		}
 		void OnDisable(){
 			TDTK.onNewBuildableE -= OnNewBuildable;
 			TDTK.onNewAbilityE -= OnNewAbility;
 			TDTK.onGameOverE -= OnGameOver;
 			TDTK.onReplaceBuildableE -= OnReplaceBuildable;
+			touchControls.Disable();
 		}
 		
+		private void StartTouch(UnityEngine.InputSystem.InputAction.CallbackContext context)
+        {
+			Debug.Log("Touch started" + touchControls.Touch.TouchPosition.ReadValue<Vector2>());
+        }
+
+		private void EndTouch(UnityEngine.InputSystem.InputAction.CallbackContext context)
+		{
+			Debug.Log("Touch ended");
+		}
+
 		void OnReplaceBuildable(int idx, UnitTower tower){ UIBuildButton.ReplaceBuildable(idx, tower); }
 		void OnNewBuildable(UnitTower tower){ UIBuildButton.NewBuildable(tower); }
 		void OnNewAbility(Ability ability){ UIAbilityButton.NewAbility(ability); }
 		void OnGameOver(bool playerWon){ UIGameOverScreen.Show(playerWon); }
-		
-		
-		
-		
 		
 		private static int pendingAbilityIdx=-1;
 		public static void SelectAbility(int idx){
@@ -161,24 +175,25 @@ namespace TDTK{
 				//if(Input.touchCount==0) TowerManager.ExitDragNDropPhase();	
 				return;
 			}
-			
+
 			//if(Input.GetKeyDown(KeyCode.F8)){
 			//	GameControl.EndGame();
 			//	//GameControl.LostLife(20);
 			//}
-			
+
 			//for mobile, to prevent getting stuck in target select phase if user click but not drag the button
 			//if(AbilityManager.InTargetSelectionMode()){
 			//	if(Input.touchCount==0) AbilityManager.ClearSelect();
 			//}
-			
+
 			int pointerID=Input.touchCount==0 ? -1 : 0;
+
 			
-			if(Input.GetMouseButtonDown(0) && !UI.IsCursorOnUI(pointerID)){
+			if(Input.GetMouseButtonDown(0) || touchControls.Touch.TouchPress.IsPressed() && !UI.IsCursorOnUI(pointerID)){
 				if(!InTargetSelectionMode()) OnCursorDown();
 			}
 			
-			if(Input.GetMouseButtonUp(0) && !wasCursorOnUI){
+			if(Input.GetMouseButtonUp(0) || touchControls.Touch.TouchPress.IsPressed() && !wasCursorOnUI){
 				if(AbilityManager.InTargetSelectionMode()) OnCursorDownAbilityTargetMode();
 				else if(pendingAbilityIdx>=0){
 					OnCursorDownAbilityTargetMode(pendingAbilityIdx);
@@ -201,8 +216,9 @@ namespace TDTK{
 			}
 			
 			if(UsePointNBuildMode() && !UIBuildButton.IsActive()){
-				SelectInfo sInfo=TowerManager.GetSelectInfo(Input.mousePosition);
-				if(sInfo.platform!=null) SelectControl.SelectNode(sInfo.platform, sInfo.nodeID);
+				//SelectInfo sInfo=TowerManager.GetSelectInfo(Input.mousePosition);
+				SelectInfo sInfo = TowerManager.GetSelectInfo(touchControls.Touch.TouchPosition.ReadValue<Vector2>());
+				if (sInfo.platform!=null) SelectControl.SelectNode(sInfo.platform, sInfo.nodeID);
 				else SelectControl.ClearNode();
 			}
 			
@@ -212,17 +228,19 @@ namespace TDTK{
 		
 		
 		private void OnCursorDownAbilityTargetMode(int idx=-1){
-			TargetingInfo tInfo=AbilityManager.OnCursorDown(Input.mousePosition, idx);
-			
+			//TargetingInfo tInfo=AbilityManager.OnCursorDown(Input.mousePosition, idx);
+			TargetingInfo tInfo = AbilityManager.OnCursorDown(touchControls.Touch.TouchPosition.ReadValue<Vector2>(), idx);
+
 			//if -1 is passed, AbilityManager will use the idx given when AbilityManager.SelectAbility() is called
-			if(tInfo.valid) AbilityManager.ActivateAbility(idx, tInfo.pos);
+			if (tInfo.valid) AbilityManager.ActivateAbility(idx, tInfo.pos);
 			else Debug.Log("target not valid");
 		}
 		
 		
 		private void OnCursorDown(){
-			SelectInfo sInfo=TowerManager.GetSelectInfo(Input.mousePosition);
-			
+			//SelectInfo sInfo=TowerManager.GetSelectInfo(Input.mousePosition);
+			SelectInfo sInfo = TowerManager.GetSelectInfo(touchControls.Touch.TouchPosition.ReadValue<Vector2>());
+
 			bool select=false;
 			bool build=false;
 			

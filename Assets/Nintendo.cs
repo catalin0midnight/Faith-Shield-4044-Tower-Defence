@@ -25,12 +25,12 @@ public partial class @Nintendo : IInputActionCollection2, IDisposable
     ""maps"": [
         {
             ""name"": ""Player"",
-            ""id"": ""8f89c426-bd10-4f4d-8b7b-b57ae44d723c"",
+            ""id"": ""40bfedab-5e02-4d97-820a-2246633867d2"",
             ""actions"": [
                 {
                     ""name"": ""Move"",
                     ""type"": ""Value"",
-                    ""id"": ""24ece3d1-2b96-43c4-99aa-bf7fb542ddb7"",
+                    ""id"": ""64566379-c70c-46e4-9111-9ee214deddd3"",
                     ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -39,7 +39,7 @@ public partial class @Nintendo : IInputActionCollection2, IDisposable
                 {
                     ""name"": ""Look"",
                     ""type"": ""Value"",
-                    ""id"": ""cff5cfc3-f245-419a-918b-aa4f040a8d42"",
+                    ""id"": ""97548c0e-7c6e-42e0-9e16-f4db460bff8f"",
                     ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -48,7 +48,7 @@ public partial class @Nintendo : IInputActionCollection2, IDisposable
                 {
                     ""name"": ""Fire"",
                     ""type"": ""Button"",
-                    ""id"": ""8b0e5a53-e3dc-4ad3-923f-238c9efdf307"",
+                    ""id"": ""63397c5b-a7d8-4a74-9b64-21b781d732ce"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -58,18 +58,18 @@ public partial class @Nintendo : IInputActionCollection2, IDisposable
             ""bindings"": [
                 {
                     ""name"": """",
-                    ""id"": ""ca8ca6fd-6705-40db-ae35-dbc8bec58b8e"",
+                    ""id"": ""68fd3686-09ac-47cf-862a-e0bb11e20236"",
                     ""path"": ""<Gamepad>/leftStick"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": "";Gamepad"",
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": ""WASD"",
-                    ""id"": ""620e5a38-e220-4ecd-8fa3-e677a674b097"",
+                    ""id"": ""f0a4a57e-e19f-47d7-95b8-a29becdf8ab0"",
                     ""path"": ""Dpad"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -80,7 +80,7 @@ public partial class @Nintendo : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""up"",
-                    ""id"": ""3133f8a4-cb54-44a7-97e4-3bc1e73da22f"",
+                    ""id"": ""be2c69de-2d17-436e-bcc2-1015f441840d"",
                     ""path"": ""<Keyboard>/w"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -91,7 +91,7 @@ public partial class @Nintendo : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""up"",
-                    ""id"": ""bf5248ed-1f44-4e58-b0ce-2edc7feb4194"",
+                    ""id"": ""40a279c8-a0f3-41a2-ab16-c1f6d7f89e34"",
                     ""path"": ""<Keyboard>/upArrow"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -102,7 +102,7 @@ public partial class @Nintendo : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""down"",
-                    ""id"": ""2e4243c2-0569-45ee-8537-fe07995fad04"",
+                    ""id"": ""111b77c9-bb08-4817-946e-f76dd504666d"",
                     ""path"": ""<Keyboard>/s"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -113,7 +113,7 @@ public partial class @Nintendo : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""down"",
-                    ""id"": ""d7826795-076f-4437-838d-6758871b2934"",
+                    ""id"": ""8b0a8b93-f18a-41fa-b7f5-6f83a26ccd78"",
                     ""path"": ""<Keyboard>/downArrow"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -124,7 +124,7 @@ public partial class @Nintendo : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""left"",
-                    ""id"": ""61048ad0-e3e1-43a8-863a-f77decf2e410"",
+                    ""id"": ""795662c0-9ae0-45f5-803b-f0778bf5d90f"",
                     ""path"": ""<Keyboard>/a"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -135,7 +135,7 @@ public partial class @Nintendo : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""left"",
-                    ""id"": ""00562168-902d-4df5-bb91-d479d21ae59c"",
+                    ""id"": ""879a96a7-4f2e-4ae1-822f-a7dc4bc5a1d9"",
                     ""path"": ""<Keyboard>/leftArrow"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -146,7 +146,7 @@ public partial class @Nintendo : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""right"",
-                    ""id"": ""3c48637d-e125-4620-a96c-62db7194044b"",
+                    ""id"": ""a7833d8e-87c4-4d61-bf36-97905858281f"",
                     ""path"": ""<Keyboard>/d"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -157,7 +157,7 @@ public partial class @Nintendo : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""right"",
-                    ""id"": ""88006031-1cbb-40a9-abc6-76372ca98593"",
+                    ""id"": ""65f640f9-8207-436d-83eb-bbd358a27a62"",
                     ""path"": ""<Keyboard>/rightArrow"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -168,7 +168,7 @@ public partial class @Nintendo : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""fd4b9a1d-5f1b-4354-b79d-d32a8c6b5542"",
+                    ""id"": ""28b4eef0-ab19-46c6-b45c-fd5e7f6a16e9"",
                     ""path"": ""<XRController>/{Primary2DAxis}"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -179,7 +179,7 @@ public partial class @Nintendo : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""35b57497-b9e7-45ce-9c13-7a82e1f87da0"",
+                    ""id"": ""17f75efe-773b-4f0e-a4d4-1569cf22ea1a"",
                     ""path"": ""<Joystick>/stick"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -190,18 +190,18 @@ public partial class @Nintendo : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""a07895da-5dfb-4f37-a174-5f43ca88cac8"",
+                    ""id"": ""d39410eb-8c9f-4705-b1e6-d106eeafc77e"",
                     ""path"": ""<Gamepad>/rightStick"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": "";Gamepad"",
                     ""action"": ""Look"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""c8358b03-6b0f-4c68-8fef-f91be86d08a4"",
+                    ""id"": ""7902bdf0-c213-481e-a684-4f21a0d47446"",
                     ""path"": ""<Pointer>/delta"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -212,7 +212,7 @@ public partial class @Nintendo : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""380b672a-be3f-46be-ace0-9035a088d460"",
+                    ""id"": ""85a56dcf-e2cb-4f1b-be83-1809b71d409a"",
                     ""path"": ""<Joystick>/{Hatswitch}"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -223,18 +223,18 @@ public partial class @Nintendo : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""aa2791d0-c940-486e-b92d-5a1b203d2b28"",
+                    ""id"": ""7d29b33e-278f-47a2-9d2a-2a3b8310f69d"",
                     ""path"": ""<Gamepad>/rightTrigger"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": "";Gamepad"",
                     ""action"": ""Fire"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""c3a28e0a-8ff1-48ce-855a-780400166a23"",
+                    ""id"": ""fa43a227-6cc9-4ef4-98e4-4b2332250123"",
                     ""path"": ""<Mouse>/leftButton"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -245,7 +245,7 @@ public partial class @Nintendo : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""d0f72639-8d1f-4fe8-99a0-41bd654d0efe"",
+                    ""id"": ""f276bc51-a920-4bea-af90-ff7e9a7ee2dc"",
                     ""path"": ""<Touchscreen>/primaryTouch/tap"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -256,7 +256,7 @@ public partial class @Nintendo : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""741fff48-938a-440f-ba20-105e3ab558b8"",
+                    ""id"": ""0a44e91d-cbf3-41ae-89ec-36f25441c613"",
                     ""path"": ""<Joystick>/trigger"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -267,7 +267,7 @@ public partial class @Nintendo : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""92e064b7-0e92-491b-8e43-bfe9f1c35ea8"",
+                    ""id"": ""5231662c-cf27-4467-8fc9-05448dbe71ba"",
                     ""path"": ""<XRController>/{PrimaryAction}"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -280,12 +280,12 @@ public partial class @Nintendo : IInputActionCollection2, IDisposable
         },
         {
             ""name"": ""UI"",
-            ""id"": ""623a4184-34c9-433c-8ea7-a8df2d5dca32"",
+            ""id"": ""5fa5dd44-54e0-4041-883a-5fcc91dc9a10"",
             ""actions"": [
                 {
                     ""name"": ""Navigate"",
                     ""type"": ""PassThrough"",
-                    ""id"": ""e582fc1f-c063-4a10-899f-d562039ad3f5"",
+                    ""id"": ""0cf8eeb9-7bb8-459b-951a-d77fa095d7dd"",
                     ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -294,7 +294,7 @@ public partial class @Nintendo : IInputActionCollection2, IDisposable
                 {
                     ""name"": ""Submit"",
                     ""type"": ""Button"",
-                    ""id"": ""63af05ed-bd64-4e14-86ca-accb8b10820f"",
+                    ""id"": ""291ac7c8-0e72-422e-8bb3-abfd68774a5d"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -303,7 +303,7 @@ public partial class @Nintendo : IInputActionCollection2, IDisposable
                 {
                     ""name"": ""Cancel"",
                     ""type"": ""Button"",
-                    ""id"": ""0237ba20-3ee8-49a0-879b-a4c7577cf4a3"",
+                    ""id"": ""349c0c56-8fe7-4ce2-8477-12ac8fa8c86c"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -312,7 +312,7 @@ public partial class @Nintendo : IInputActionCollection2, IDisposable
                 {
                     ""name"": ""Point"",
                     ""type"": ""PassThrough"",
-                    ""id"": ""36620dc3-4bb3-4414-b2d4-0e3a752e70f3"",
+                    ""id"": ""3a4ff299-e75d-42b2-a07c-017f19de8a7a"",
                     ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -321,7 +321,7 @@ public partial class @Nintendo : IInputActionCollection2, IDisposable
                 {
                     ""name"": ""Click"",
                     ""type"": ""PassThrough"",
-                    ""id"": ""f5a84593-b9b0-41c6-933d-d7f670fd1216"",
+                    ""id"": ""4fe89dc3-5a80-4162-8ebe-dc3af8f824e5"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -330,7 +330,7 @@ public partial class @Nintendo : IInputActionCollection2, IDisposable
                 {
                     ""name"": ""ScrollWheel"",
                     ""type"": ""PassThrough"",
-                    ""id"": ""4588584b-9fde-4c43-a999-f63eba6852dd"",
+                    ""id"": ""6689f161-61c5-493d-8aeb-837e3222d607"",
                     ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -339,7 +339,7 @@ public partial class @Nintendo : IInputActionCollection2, IDisposable
                 {
                     ""name"": ""MiddleClick"",
                     ""type"": ""PassThrough"",
-                    ""id"": ""cc1fc987-f2fb-4bd8-8724-0ccbef04bc8c"",
+                    ""id"": ""79646e02-d42a-4c17-b795-ddc5e28496e1"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -348,7 +348,7 @@ public partial class @Nintendo : IInputActionCollection2, IDisposable
                 {
                     ""name"": ""RightClick"",
                     ""type"": ""PassThrough"",
-                    ""id"": ""aeb5171c-5139-4125-bcd4-ea4088d17b1d"",
+                    ""id"": ""80c6b5ca-bcc7-4d83-b94a-2f3b24423e62"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -357,7 +357,7 @@ public partial class @Nintendo : IInputActionCollection2, IDisposable
                 {
                     ""name"": ""TrackedDevicePosition"",
                     ""type"": ""PassThrough"",
-                    ""id"": ""e14cadd2-4b29-429f-ab63-a8c659c4fb5a"",
+                    ""id"": ""fd62b983-7382-4d7f-bdc1-1d1b36670a12"",
                     ""expectedControlType"": ""Vector3"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -366,7 +366,7 @@ public partial class @Nintendo : IInputActionCollection2, IDisposable
                 {
                     ""name"": ""TrackedDeviceOrientation"",
                     ""type"": ""PassThrough"",
-                    ""id"": ""cf90cf2c-0652-4d41-885b-d705bf0b825c"",
+                    ""id"": ""f2a1c939-438b-4679-ac17-b59813827ec5"",
                     ""expectedControlType"": ""Quaternion"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -376,7 +376,7 @@ public partial class @Nintendo : IInputActionCollection2, IDisposable
             ""bindings"": [
                 {
                     ""name"": ""Gamepad"",
-                    ""id"": ""980f4393-3d24-4573-b161-1d81ad7ac83f"",
+                    ""id"": ""a814b99e-737b-46b7-a6a6-b477fb2c6fe6"",
                     ""path"": ""2DVector"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -387,106 +387,106 @@ public partial class @Nintendo : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""up"",
-                    ""id"": ""3b487fc8-3783-4f53-a06c-e926596f2f60"",
+                    ""id"": ""12da345c-2402-47b0-bd3f-30e3937c388b"",
                     ""path"": ""<Gamepad>/leftStick/up"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": "";Gamepad"",
                     ""action"": ""Navigate"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
                 {
                     ""name"": ""up"",
-                    ""id"": ""cd5adf3f-1cac-40a1-b663-e18f5486b5bf"",
+                    ""id"": ""5fdae56d-6111-4953-b207-c7f4ebfa22ab"",
                     ""path"": ""<Gamepad>/rightStick/up"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": "";Gamepad"",
                     ""action"": ""Navigate"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
                 {
                     ""name"": ""down"",
-                    ""id"": ""31702c32-2227-43ba-b084-3763f8d4450a"",
+                    ""id"": ""783c2c6b-3d02-4417-89e0-286fd5122f5e"",
                     ""path"": ""<Gamepad>/leftStick/down"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": "";Gamepad"",
                     ""action"": ""Navigate"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
                 {
                     ""name"": ""down"",
-                    ""id"": ""a8b75003-be1a-4a8e-9654-4b4657135176"",
+                    ""id"": ""4176c3bf-58c0-457c-9a34-69b1dc9b801c"",
                     ""path"": ""<Gamepad>/rightStick/down"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": "";Gamepad"",
                     ""action"": ""Navigate"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
                 {
                     ""name"": ""left"",
-                    ""id"": ""9fb454b7-0fbf-4eb6-9a49-ed7ed321e248"",
+                    ""id"": ""63b97da9-dc0e-480c-bda7-b84f898b2f73"",
                     ""path"": ""<Gamepad>/leftStick/left"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": "";Gamepad"",
                     ""action"": ""Navigate"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
                 {
                     ""name"": ""left"",
-                    ""id"": ""9b50dd26-32bd-4754-9731-de5c1041e2ac"",
+                    ""id"": ""0e08e6d6-1c57-4e63-b7f4-328efcf75d7b"",
                     ""path"": ""<Gamepad>/rightStick/left"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": "";Gamepad"",
                     ""action"": ""Navigate"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
                 {
                     ""name"": ""right"",
-                    ""id"": ""0ab2b896-befa-402e-b68b-6a42738f9a13"",
+                    ""id"": ""e7f5e7b0-45f5-434b-93df-42c0b42a2969"",
                     ""path"": ""<Gamepad>/leftStick/right"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": "";Gamepad"",
                     ""action"": ""Navigate"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
                 {
                     ""name"": ""right"",
-                    ""id"": ""fac776b4-413b-4efa-9582-7356cfb7c8ec"",
+                    ""id"": ""9b510af8-6eed-4f2d-9f7f-42bb6eb9cfed"",
                     ""path"": ""<Gamepad>/rightStick/right"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": "";Gamepad"",
                     ""action"": ""Navigate"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
                 {
                     ""name"": """",
-                    ""id"": ""a6f2c023-a2df-4546-ab1d-4533d9d1ba4c"",
+                    ""id"": ""629a33b6-6be6-4333-aa19-728371695ffc"",
                     ""path"": ""<Gamepad>/dpad"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": "";Gamepad"",
                     ""action"": ""Navigate"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": ""Joystick"",
-                    ""id"": ""cb606b53-548c-4168-bd54-47a3108b928e"",
+                    ""id"": ""3a1a9bc2-0b46-4372-9362-cd1208cc7908"",
                     ""path"": ""2DVector"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -497,7 +497,7 @@ public partial class @Nintendo : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""up"",
-                    ""id"": ""da417ba8-9e8b-403d-88db-62167f093503"",
+                    ""id"": ""977aa0b8-516d-40d2-a2ef-0b916eacd26f"",
                     ""path"": ""<Joystick>/stick/up"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -508,7 +508,7 @@ public partial class @Nintendo : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""down"",
-                    ""id"": ""96425e4d-db70-43e9-8213-d34b459b317b"",
+                    ""id"": ""8169d995-2df5-4380-9555-a2894fe60455"",
                     ""path"": ""<Joystick>/stick/down"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -519,7 +519,7 @@ public partial class @Nintendo : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""left"",
-                    ""id"": ""2ab1a5b7-70fd-4165-ad60-a13aed14ee5d"",
+                    ""id"": ""b3e41d5e-0fb9-443c-9046-641cc6862868"",
                     ""path"": ""<Joystick>/stick/left"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -530,7 +530,7 @@ public partial class @Nintendo : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""right"",
-                    ""id"": ""36c5bb05-18af-4e6f-a852-6bb677707f8e"",
+                    ""id"": ""dde6cc84-37c1-41a2-a3ce-c7e8a98a1f30"",
                     ""path"": ""<Joystick>/stick/right"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -541,7 +541,7 @@ public partial class @Nintendo : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""Keyboard"",
-                    ""id"": ""dab264a0-8817-4ed9-a975-6d47df6a2913"",
+                    ""id"": ""1ceec3ff-c993-487d-8cfe-4a9371a04080"",
                     ""path"": ""2DVector"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -552,7 +552,7 @@ public partial class @Nintendo : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""up"",
-                    ""id"": ""9498eedc-3ff5-4545-bf91-ccf0d9e557b6"",
+                    ""id"": ""9700c3fb-5be7-4102-8cea-bd5c97da0af8"",
                     ""path"": ""<Keyboard>/w"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -563,7 +563,7 @@ public partial class @Nintendo : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""up"",
-                    ""id"": ""87ac0786-9bde-4e91-9b35-d0bdeed291b5"",
+                    ""id"": ""94bf9955-cc51-4500-8686-165d5fc2efc3"",
                     ""path"": ""<Keyboard>/upArrow"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -574,7 +574,7 @@ public partial class @Nintendo : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""down"",
-                    ""id"": ""d058ecc4-fb5d-4769-bc00-81ad2b62344b"",
+                    ""id"": ""918280b1-565f-467d-b1b2-96dcdb1757c8"",
                     ""path"": ""<Keyboard>/s"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -585,7 +585,7 @@ public partial class @Nintendo : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""down"",
-                    ""id"": ""30e7b2d7-f55d-4c75-b1f9-b506f5da96c2"",
+                    ""id"": ""32a255eb-5ce0-4b88-b3f1-f28d88756ee7"",
                     ""path"": ""<Keyboard>/downArrow"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -596,7 +596,7 @@ public partial class @Nintendo : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""left"",
-                    ""id"": ""31ad4546-8a1e-4113-836d-9f30a1d680ad"",
+                    ""id"": ""4bd7ae25-2e9b-436a-b27b-bc10709d767c"",
                     ""path"": ""<Keyboard>/a"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -607,7 +607,7 @@ public partial class @Nintendo : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""left"",
-                    ""id"": ""d5a9f73a-6b61-49ce-aa1c-c3a29ca41dbd"",
+                    ""id"": ""c0d6ed21-31be-4308-ad99-abbc18605c52"",
                     ""path"": ""<Keyboard>/leftArrow"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -618,7 +618,7 @@ public partial class @Nintendo : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""right"",
-                    ""id"": ""7252a758-ffc1-428e-ada3-f85a23982bbd"",
+                    ""id"": ""1d1818b4-cd53-4d86-98b7-5606aed4b1f4"",
                     ""path"": ""<Keyboard>/d"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -629,7 +629,7 @@ public partial class @Nintendo : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""right"",
-                    ""id"": ""0d6042cc-4200-4967-b964-33394a501842"",
+                    ""id"": ""010870f1-65fc-46b5-a016-a332fce54123"",
                     ""path"": ""<Keyboard>/rightArrow"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -640,29 +640,7 @@ public partial class @Nintendo : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""027617a0-d1b7-4aba-9d9b-6427ef3f1e9f"",
-                    ""path"": ""<SwitchProControllerHID>/leftStick"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Nintendo"",
-                    ""action"": ""Navigate"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""1f09ad0d-8e67-4d6f-b385-3b7617904ab9"",
-                    ""path"": ""<SwitchProControllerHID>/dpad"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Nintendo"",
-                    ""action"": ""Navigate"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""9c09b015-521a-431f-90c2-7edeb75d0abf"",
+                    ""id"": ""72111821-2899-41a3-96e0-33eba71d7daa"",
                     ""path"": ""*/{Submit}"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -673,18 +651,7 @@ public partial class @Nintendo : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""4e60f7d3-6718-4706-9810-deac2d3525c0"",
-                    ""path"": ""<SwitchProControllerHID>/buttonEast"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Nintendo"",
-                    ""action"": ""Submit"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""2550f74f-11c1-4fa4-8c29-b73700039960"",
+                    ""id"": ""f702eafe-8efd-47b6-8ee9-8eadeb835d3d"",
                     ""path"": ""*/{Cancel}"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -695,18 +662,7 @@ public partial class @Nintendo : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""ebfc937d-b205-4c79-8409-77c624111549"",
-                    ""path"": ""<SwitchProControllerHID>/buttonSouth"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Nintendo"",
-                    ""action"": ""Cancel"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""3f1f7999-468b-4161-aafa-127c2b901f65"",
+                    ""id"": ""71825473-e4db-4819-a382-9ef2e012e6cb"",
                     ""path"": ""<Mouse>/position"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -717,7 +673,7 @@ public partial class @Nintendo : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""ae6425cd-9ccc-4b14-a47f-f5450e66b744"",
+                    ""id"": ""fd4253b0-5c21-4ab4-8998-efdc6ba09304"",
                     ""path"": ""<Pen>/position"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -728,7 +684,7 @@ public partial class @Nintendo : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""6aec6799-f9a0-4557-8dea-0c14bfc98d91"",
+                    ""id"": ""f5387c32-f5ea-4e8f-8e46-a01ccbb6bcd9"",
                     ""path"": ""<Touchscreen>/touch*/position"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -739,7 +695,7 @@ public partial class @Nintendo : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""7308f863-1f08-4497-8442-80c61ea75ae0"",
+                    ""id"": ""743ec1ad-0fcf-4752-a26b-b23b53142f64"",
                     ""path"": ""<Mouse>/leftButton"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -750,7 +706,7 @@ public partial class @Nintendo : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""a19c0a50-417a-405d-a0c8-eb2963bf7119"",
+                    ""id"": ""73968ae5-e5d6-4b93-a650-7dd029d8c2fd"",
                     ""path"": ""<Pen>/tip"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -761,7 +717,7 @@ public partial class @Nintendo : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""81fe2391-781f-47fc-ad1b-d7150a0f6418"",
+                    ""id"": ""d75d8b6e-5f36-4411-afc4-4abb9a75b82b"",
                     ""path"": ""<Touchscreen>/touch*/press"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -772,7 +728,7 @@ public partial class @Nintendo : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""5ec2228b-f7cb-431b-b3f3-6391599e5169"",
+                    ""id"": ""1a1bea42-55b5-4d96-b9f5-22947d2947d8"",
                     ""path"": ""<XRController>/trigger"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -783,7 +739,7 @@ public partial class @Nintendo : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""304373e4-77cd-455d-9410-f6c92ca74da3"",
+                    ""id"": ""acc8a9d1-6567-4b5b-8ada-dec768191581"",
                     ""path"": ""<Mouse>/scroll"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -794,7 +750,7 @@ public partial class @Nintendo : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""5d345048-ce92-43b1-aaa5-58b2790fc5dc"",
+                    ""id"": ""8a5b65bc-007e-4b34-9d8f-b4ef5c428ede"",
                     ""path"": ""<Mouse>/middleButton"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -805,7 +761,7 @@ public partial class @Nintendo : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""62578f21-a429-43c9-b5c7-3d50bd154452"",
+                    ""id"": ""652839b9-964c-4f19-ae8f-1ebb42217e47"",
                     ""path"": ""<Mouse>/rightButton"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -816,7 +772,7 @@ public partial class @Nintendo : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""dc0316a6-738a-4885-bede-ac60b253758f"",
+                    ""id"": ""8a28d5a6-1a79-43e5-bfcf-046367861705"",
                     ""path"": ""<XRController>/devicePosition"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -827,12 +783,80 @@ public partial class @Nintendo : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""13aa9253-65c2-465c-94fe-ffd7f27c3af7"",
+                    ""id"": ""e8e07bfa-98da-4920-8fb9-a4062de3e119"",
                     ""path"": ""<XRController>/deviceRotation"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""XR"",
                     ""action"": ""TrackedDeviceOrientation"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""Touch"",
+            ""id"": ""f570aad6-5e4b-4935-95da-b68c3055214e"",
+            ""actions"": [
+                {
+                    ""name"": ""TouchInput"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""2b69ef62-fa4a-40ed-aaed-d4f29a42ab2e"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""TouchPress"",
+                    ""type"": ""Button"",
+                    ""id"": ""45469719-105d-46be-9f70-33c9c7d95b37"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""TouchPosition"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""ec35905f-c3df-4f6e-929c-379f9d1e0fe4"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""b70bdf6f-cb83-4fb5-bbd7-5f673830723b"",
+                    ""path"": ""<Touchscreen>/primaryTouch/tapCount"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Nintendo"",
+                    ""action"": ""TouchInput"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a89902a2-dcc5-4489-a58a-815a36ea42a2"",
+                    ""path"": ""<Touchscreen>/primaryTouch/press"",
+                    ""interactions"": ""Press"",
+                    ""processors"": """",
+                    ""groups"": ""Nintendo"",
+                    ""action"": ""TouchPress"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1ba37177-add7-4df4-8bf4-fbe2708a354d"",
+                    ""path"": ""<Touchscreen>/primaryTouch/position"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""TouchPosition"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -881,6 +905,11 @@ public partial class @Nintendo : IInputActionCollection2, IDisposable
         m_UI_RightClick = m_UI.FindAction("RightClick", throwIfNotFound: true);
         m_UI_TrackedDevicePosition = m_UI.FindAction("TrackedDevicePosition", throwIfNotFound: true);
         m_UI_TrackedDeviceOrientation = m_UI.FindAction("TrackedDeviceOrientation", throwIfNotFound: true);
+        // Touch
+        m_Touch = asset.FindActionMap("Touch", throwIfNotFound: true);
+        m_Touch_TouchInput = m_Touch.FindAction("TouchInput", throwIfNotFound: true);
+        m_Touch_TouchPress = m_Touch.FindAction("TouchPress", throwIfNotFound: true);
+        m_Touch_TouchPosition = m_Touch.FindAction("TouchPosition", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -1090,6 +1119,55 @@ public partial class @Nintendo : IInputActionCollection2, IDisposable
         }
     }
     public UIActions @UI => new UIActions(this);
+
+    // Touch
+    private readonly InputActionMap m_Touch;
+    private ITouchActions m_TouchActionsCallbackInterface;
+    private readonly InputAction m_Touch_TouchInput;
+    private readonly InputAction m_Touch_TouchPress;
+    private readonly InputAction m_Touch_TouchPosition;
+    public struct TouchActions
+    {
+        private @Nintendo m_Wrapper;
+        public TouchActions(@Nintendo wrapper) { m_Wrapper = wrapper; }
+        public InputAction @TouchInput => m_Wrapper.m_Touch_TouchInput;
+        public InputAction @TouchPress => m_Wrapper.m_Touch_TouchPress;
+        public InputAction @TouchPosition => m_Wrapper.m_Touch_TouchPosition;
+        public InputActionMap Get() { return m_Wrapper.m_Touch; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(TouchActions set) { return set.Get(); }
+        public void SetCallbacks(ITouchActions instance)
+        {
+            if (m_Wrapper.m_TouchActionsCallbackInterface != null)
+            {
+                @TouchInput.started -= m_Wrapper.m_TouchActionsCallbackInterface.OnTouchInput;
+                @TouchInput.performed -= m_Wrapper.m_TouchActionsCallbackInterface.OnTouchInput;
+                @TouchInput.canceled -= m_Wrapper.m_TouchActionsCallbackInterface.OnTouchInput;
+                @TouchPress.started -= m_Wrapper.m_TouchActionsCallbackInterface.OnTouchPress;
+                @TouchPress.performed -= m_Wrapper.m_TouchActionsCallbackInterface.OnTouchPress;
+                @TouchPress.canceled -= m_Wrapper.m_TouchActionsCallbackInterface.OnTouchPress;
+                @TouchPosition.started -= m_Wrapper.m_TouchActionsCallbackInterface.OnTouchPosition;
+                @TouchPosition.performed -= m_Wrapper.m_TouchActionsCallbackInterface.OnTouchPosition;
+                @TouchPosition.canceled -= m_Wrapper.m_TouchActionsCallbackInterface.OnTouchPosition;
+            }
+            m_Wrapper.m_TouchActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @TouchInput.started += instance.OnTouchInput;
+                @TouchInput.performed += instance.OnTouchInput;
+                @TouchInput.canceled += instance.OnTouchInput;
+                @TouchPress.started += instance.OnTouchPress;
+                @TouchPress.performed += instance.OnTouchPress;
+                @TouchPress.canceled += instance.OnTouchPress;
+                @TouchPosition.started += instance.OnTouchPosition;
+                @TouchPosition.performed += instance.OnTouchPosition;
+                @TouchPosition.canceled += instance.OnTouchPosition;
+            }
+        }
+    }
+    public TouchActions @Touch => new TouchActions(this);
     private int m_NintendoSchemeIndex = -1;
     public InputControlScheme NintendoScheme
     {
@@ -1126,5 +1204,11 @@ public partial class @Nintendo : IInputActionCollection2, IDisposable
         void OnRightClick(InputAction.CallbackContext context);
         void OnTrackedDevicePosition(InputAction.CallbackContext context);
         void OnTrackedDeviceOrientation(InputAction.CallbackContext context);
+    }
+    public interface ITouchActions
+    {
+        void OnTouchInput(InputAction.CallbackContext context);
+        void OnTouchPress(InputAction.CallbackContext context);
+        void OnTouchPosition(InputAction.CallbackContext context);
     }
 }

@@ -48,14 +48,24 @@ namespace TDTK{
 		
 		
 		public void OnResumeButton(){
+			SaveBridge.SaveAllData();
 			Hide();
 		}
 		public void OnRestartButton(){
+			SaveBridge.SaveAllData();
 			GameControl.RestartLevel();
 		}
 		public void OnMenuButton(){
-			GameControl.MainMenu();
+			SaveBridge.SaveAllData();
+			//GameControl.MainMenu();
 		}
+
+		public void ResetTimerOnLoad()
+        {
+			cachedTimeScale = Time.timeScale;
+
+			Time.timeScale = 1f;
+        }
 		
 		
 		void OnSFXVolumeChanged(){

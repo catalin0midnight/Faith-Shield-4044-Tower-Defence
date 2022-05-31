@@ -114,7 +114,8 @@ public class MenuController : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        //In future neeed to change for loading current level
+        SceneManager.LoadScene("Level_1_1_Tutorial");
     }
 
     public void QuitGame()

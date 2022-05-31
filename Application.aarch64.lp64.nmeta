@@ -3,7 +3,7 @@
   <Core>
     <Name>Application</Name>
     <Is64BitInstruction>True</Is64BitInstruction>
-    <ApplicationId>0x01004b9000490000</ApplicationId>
+    <ApplicationId>0x0100cb0018acc000</ApplicationId>
     <ProgramIndex>0</ProgramIndex>
     <MainThreadStackSize>0x00100000</MainThreadStackSize>
     <ProcessAddressSpace>AddressSpace64Bit</ProcessAddressSpace>
@@ -12,12 +12,12 @@
   <Application>
     <Title>
       <Language>AmericanEnglish</Language>
-      <Name>Faith and Shield 4044 Tower Defence</Name>
-      <Publisher>DefaultCompany</Publisher>
+      <Name>Faith and Shield 4044 Tower Defence Space Wars Game 2022</Name>
+      <Publisher>Midnight Works</Publisher>
     </Title>
     <Icon>
       <Language>AmericanEnglish</Language>
-      <IconPath>..\..\..\..\..\Nintendo\Faith_and_Shield_4044\NintendoSDK\Resources\SpecFiles\NintendoSDK_Application.bmp</IconPath>
+      <IconPath>..\..\..\Downloads\faith n shield.bmp</IconPath>
     </Icon>
     <ReleaseVersion>0</ReleaseVersion>
     <DisplayVersion>0.1</DisplayVersion>
@@ -31,9 +31,50 @@
     <LogoType>LicensedByNintendo</LogoType>
     <LogoHandling>Auto</LogoHandling>
     <Rating>
-      <Organization>ESRB</Organization>
+      <Organization>ACB</Organization>
       <Age>0</Age>
     </Rating>
+    <Rating>
+      <Organization>ClassInd</Organization>
+      <Age>0</Age>
+    </Rating>
+    <Rating>
+      <Organization>ESRB</Organization>
+      <Age>6</Age>
+    </Rating>
+    <Rating>
+      <Organization>GRACGCRB</Organization>
+      <Age>0</Age>
+    </Rating>
+    <Rating>
+      <Organization>IARCGeneric</Organization>
+      <Age>3</Age>
+    </Rating>
+    <Rating>
+      <Organization>OFLC</Organization>
+      <Age>0</Age>
+    </Rating>
+    <Rating>
+      <Organization>PEGI</Organization>
+      <Age>3</Age>
+    </Rating>
+    <Rating>
+      <Organization>PEGIBBFC</Organization>
+      <Age>3</Age>
+    </Rating>
+    <Rating>
+      <Organization>PEGIPortugal</Organization>
+      <Age>3</Age>
+    </Rating>
+    <Rating>
+      <Organization>Russian</Organization>
+      <Age>0</Age>
+    </Rating>
+    <Rating>
+      <Organization>USK</Organization>
+      <Age>0</Age>
+    </Rating>
+    <LegalInformationFilePath>..\..\..\Downloads\legal_info_0100cb0018acc000_0aec.zip</LegalInformationFilePath>
     <VideoCapture>Enable</VideoCapture>
     <RuntimeAddOnContentInstall>Deny</RuntimeAddOnContentInstall>
     <CrashReport>Allow</CrashReport>
