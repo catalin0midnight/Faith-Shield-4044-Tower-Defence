@@ -240,6 +240,7 @@ public class bl_SceneLoader : MonoBehaviour
         ScreenUI.SetupUIForScene(CurrentLoadLevel);
         //start load the scene asynchronously doesn't matter if use fake time
         StartCoroutine(DoAsyncOperation(CurrentLoadLevel.SceneName));
+        SaveBridge.SaveAllData();
         //if fake time is used, don't load the scene until the fake time passed
         if (CurrentLoadLevel.LoadingType == LoadingType.Fake)
         {

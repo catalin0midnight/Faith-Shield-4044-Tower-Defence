@@ -145,17 +145,27 @@ namespace TDTK {
 		
 		public static void RestartLevel(){
 			Debug.Log("Restart level");
-			SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+			//SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+			bl_SceneLoaderManager.LoadScene(SceneManager.GetActiveScene().name);
 			Time.timeScale=1;
 		}
+
 		public static void NextLevel(){
+#if UNITY_SWITCH && !UNITY_EDITOR
+			SaveBridge.SetIntPP("lastVisitedLevel", SceneManager.GetActiveScene().buildIndex + 1);
+#else
+			PlayerPrefs.SetInt("lastVisitedLevel", SceneManager.GetActiveScene().buildIndex + 1);
+#endif
 			Debug.Log("load next level");
-			SceneManager.LoadScene(instance.nextLevelName);
+			//SceneManager.LoadScene(instance.nextLevelName);
+			bl_SceneLoaderManager.LoadScene(instance.nextLevelName);
 			Time.timeScale=1;
+			SaveBridge.SaveAllData();
 		}
 		public static void MainMenu(){
 			Debug.Log("load main menu");
-			SceneManager.LoadScene(instance.mainMenuName);
+			//SceneManager.LoadScene(instance.mainMenuName);
+			bl_SceneLoaderManager.LoadScene(instance.mainMenuName);
 			Time.timeScale=1;
 		}
 		

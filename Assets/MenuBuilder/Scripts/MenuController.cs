@@ -12,14 +12,12 @@ public class MenuController : MonoBehaviour
     [SerializeField] private int playerID = 0;
     [SerializeField] private Player player;
     //MENU UI
-    [SerializeField] private GameObject newGameLayout;
-    [SerializeField] private GameObject loadGameLayout;
     [SerializeField] private GameObject optionsLayout;
-    [SerializeField] private GameObject exitLayout;
     [SerializeField] private Button newGameButton;
-    [SerializeField] private Button loadGameButton;
+    [SerializeField] private Button continueGameButton;
     [SerializeField] private Button optionsButton;
-    [SerializeField] private Button exitButton;
+
+    private int sceneToContinue;
 
     private void Awake()
     {
@@ -34,93 +32,46 @@ public class MenuController : MonoBehaviour
 
     private void FadingMenuButtons()
     {
-        if (newGameLayout.activeSelf == true)
-        {
-            newGameButton.interactable = false;
-            loadGameButton.interactable = false;
-            optionsButton.interactable = false;
-            exitButton.interactable = false;
-        }
-        if (loadGameLayout.activeSelf == true)
-        {
-            newGameButton.interactable = false;
-            loadGameButton.interactable = false;
-            optionsButton.interactable = false;
-            exitButton.interactable = false;
-        }
         if (optionsLayout.activeSelf == true)
         {
             newGameButton.interactable = false;
-            loadGameButton.interactable = false;
+            continueGameButton.interactable = false;
             optionsButton.interactable = false;
-            exitButton.interactable = false;
-        }
-        if (exitLayout.activeSelf == true)
-        {
-            newGameButton.interactable = false;
-            loadGameButton.interactable = false;
-            optionsButton.interactable = false;
-            exitButton.interactable = false;
         }
     }
 
     private void ClosingMenuLayouts()
     {
-        if (player.GetButtonDown("Cancel") && newGameLayout.activeSelf == true)
-        {
-            newGameLayout.SetActive(false);
-            newGameButton.Select();
-            newGameButton.interactable = true;
-            loadGameButton.interactable = true;
-            optionsButton.interactable = true;
-            exitButton.interactable = true;
-        }
-        if (player.GetButtonDown("Cancel") && loadGameLayout.activeSelf == true)
-        {
-            loadGameLayout.SetActive(false);
-            loadGameButton.Select();
-            newGameButton.interactable = true;
-            loadGameButton.interactable = true;
-            optionsButton.interactable = true;
-            exitButton.interactable = true;
-        }
         if (player.GetButtonDown("Cancel") && optionsLayout.activeSelf == true)
         {
             optionsLayout.SetActive(false);
             optionsButton.Select();
             newGameButton.interactable = true;
-            loadGameButton.interactable = true;
+            continueGameButton.interactable = true;
             optionsButton.interactable = true;
-            exitButton.interactable = true;
-        }
-        if (player.GetButtonDown("Cancel") && exitLayout.activeSelf == true)
-        {
-            exitLayout.SetActive(false);
-            exitButton.Select();
-            newGameButton.interactable = true;
-            loadGameButton.interactable = true;
-            optionsButton.interactable = true;
-            exitButton.interactable = true;
-        }
-
-        if(exitLayout.activeSelf == false)
-        {
-            newGameButton.interactable = true;
-            loadGameButton.interactable = true;
-            optionsButton.interactable = true;
-            exitButton.interactable = true;
         }
     }
 
-    public void StartGame()
+    public void ContinueGame()
     {
-        //In future neeed to change for loading current level
-        SceneManager.LoadScene("Level_1_1_Tutorial");
-    }
-
-    public void QuitGame()
-    {
-        Application.Quit();
-        Debug.Log("Application closed");
+#if UNITY_SWITCH && !UNITY_EDITOR
+        sceneToContinue = SaveBridge.GetIntPP("lastVisitedLevel");
+        if(sceneToContinue !=0)
+        {
+        SceneManager.LoadScene(sceneToContinue);
+        bl_SceneLoader.GetActiveLoader();
+        }
+        else
+            return;
+#else
+        sceneToContinue = PlayerPrefs.GetInt("lastVisitedLevel");
+        if (sceneToContinue != 0)
+        {
+            bl_SceneLoaderManager.LoadScene(SceneManager.GetSceneByBuildIndex(sceneToContinue).name);
+            bl_SceneLoader.GetActiveLoader();
+        }
+        else
+            return;
+#endif
     }
 }

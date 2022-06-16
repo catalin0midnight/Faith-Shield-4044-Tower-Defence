@@ -14,18 +14,20 @@ namespace TDTK{
 		public UIButton buttonPerk;
 		
 		public UIButton buttonFF;
+		public Text buttonFFText;
 		
 		public UIButton buttonPause;
 
 
-		// Use this for initialization
-		void Start () {
+        // Use this for initialization
+
+        void Start () {
 			UpdateWaveDisplay(1);
 			
 			buttonSpawn.Init();		
 			buttonSpawn.button.onClick.AddListener(() => OnSpawnButton());
 			buttonSpawn.SetActive(true);
-			
+
 			sliderSpawnTimer.gameObject.SetActive(false);
 			
 			if(PerkManager.IsEnabled() && buttonPerk.rootObj!=null){
@@ -101,12 +103,12 @@ namespace TDTK{
 		void OnFFButton(){
 			if(Time.timeScale==1){
 				Time.timeScale=3;
-				buttonFF.SetLabel(">>");
+				buttonFFText.text = ">>";
 
 			}
 			else{
 				Time.timeScale=1;
-				buttonFF.SetLabel(">");
+				buttonFFText.text = ">";
 			}
 		}
 		
