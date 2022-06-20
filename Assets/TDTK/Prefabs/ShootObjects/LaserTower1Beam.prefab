@@ -94,14 +94,14 @@ MonoBehaviour:
   effectShoot:
     obj: {fileID: 195330, guid: 1c6f31acfed52ea4c933c5ab6c9cfd4b, type: 3}
     autoDestroy: 1
-    duration: 0.325
+    duration: 0.25
   effectHit:
     obj: {fileID: 165220, guid: 9fe8a4211838aa744900561a4b1853c2, type: 3}
     autoDestroy: 1
-    duration: 0.15
+    duration: 0.25
   shootSound: {fileID: 8300000, guid: 15a3211a3c389664a94d401850cad8c7, type: 3}
   hitSound: {fileID: 0}
-  sfxVolume: 0.4
+  sfxVolume: 1
   tgtUnit: {fileID: 0}
   tgtRadius: 0
   targetPos: {x: 0, y: 0, z: 0}

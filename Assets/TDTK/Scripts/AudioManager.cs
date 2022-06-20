@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DarkTonic.MasterAudio;
 
 namespace TDTK{
 
@@ -54,7 +55,8 @@ namespace TDTK{
 		}
 
 		public static void SetVolumeSFX(float value){
-			AudioListener.volume=value;
+			//AudioListener.volume=value;
+			MasterAudio.PlaylistMasterVolume = value;
 #if UNITY_SWITCH && !UNITY_EDITOR
 			SaveBridge.SetFloatPP(vol_SaveString_SFX, value);
 #else
@@ -108,7 +110,7 @@ namespace TDTK{
 				GameObject obj=new GameObject("AudioSource"+(i+1));
 				
 				AudioSource src=obj.AddComponent<AudioSource>();
-				src.playOnAwake=false; src.loop=false; src.volume=1; //src.spatialBlend=.75f;
+				src.playOnAwake=false; src.loop=false; src.volume=1; src.rolloffMode = AudioRolloffMode.Linear; src.spatialBlend = 0.75f;
 				obj.transform.parent=transform; obj.transform.localPosition=Vector3.zero;
 				
 				audioSourceList.Add(src);
@@ -119,7 +121,7 @@ namespace TDTK{
 				GameObject obj=new GameObject("AudioSource_UI_"+(i+1));
 				
 				AudioSource src=obj.AddComponent<AudioSource>();
-				src.playOnAwake=false; src.loop=false; src.volume=GetVolumeUI(); //src.spatialBlend=.75f;
+				src.playOnAwake=false; src.loop=false; src.volume=GetVolumeUI(); src.rolloffMode = AudioRolloffMode.Linear; src.spatialBlend = 0.75f;
 				obj.transform.parent=transform; obj.transform.localPosition=Vector3.zero;
 				
 				audioSourceList_UI.Add(src);

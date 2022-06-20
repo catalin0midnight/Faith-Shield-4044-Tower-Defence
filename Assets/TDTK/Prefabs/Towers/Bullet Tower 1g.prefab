@@ -855,7 +855,8 @@ MonoBehaviour:
   instanceID: -1
   unitName: Rocket Tower
   icon: {fileID: 21300004, guid: d138993b3dd86764ba142a07cff82937, type: 3}
-  desp: Basic Bullet Tower that have low damage, but fast attack rate.
+  desp: 'Rocket Tower - Level 1. Can attack just one target. Cooldown - 1s. Damage
+    between 4 - 7. '
   canBeAttacked: 1
   canBeTargeted: 1
   unitRadius: 0.5

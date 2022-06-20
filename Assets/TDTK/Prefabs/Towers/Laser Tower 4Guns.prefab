@@ -227,7 +227,8 @@ MonoBehaviour:
   instanceID: -1
   unitName: Laser Tower 4Guns
   icon: {fileID: 21300004, guid: d138993b3dd86764ba142a07cff82937, type: 3}
-  desp: Basic Bullet Tower that have low damage, but fast attack rate.
+  desp: Laser Tower - Level 3. Can attack four  targets. Cooldown - 0.7s. Damage
+    between 8 - 10 per each gun. Special effect - slow target with 5% chance.
   canBeAttacked: 1
   canBeTargeted: 1
   unitRadius: 0.5
@@ -270,12 +271,12 @@ MonoBehaviour:
     damageMax: 10
     attackRange: 16
     aoeRange: 0
-    cooldown: 0.75
+    cooldown: 0.7
     critChance: 0
     critMultiplier: 0
-    effectOnHitChance: 0.25
+    effectOnHitChance: 0.05
     overrideExistingEffect: 0
-    effectOnHitIDList: 
+    effectOnHitIDList: 05000000
     hit_AOE: 1
     damageMin_AOE: 2
     damageMax_AOE: 2

@@ -1032,7 +1032,8 @@ MonoBehaviour:
   instanceID: -1
   unitName: Laser Tower 1Gun
   icon: {fileID: 21300004, guid: d138993b3dd86764ba142a07cff82937, type: 3}
-  desp: Basic Bullet Tower that have low damage, but fast attack rate.
+  desp: 'Laser Tower - Level 1. Can attack just one target. Cooldown - 0.75s. Damage
+    between 6 - 8. '
   canBeAttacked: 1
   canBeTargeted: 1
   unitRadius: 0.5

@@ -11,8 +11,8 @@ namespace TDTK{
 	public class UIPauseScreen : UIScreen {
 		
 		[Space(5)]
-		public Slider sliderVolumeSFX;
-		public Slider sliderVolumeUI;
+		public Slider sliderMusicVolume;
+		public Slider sliderSFXVolume;
 		
 		[Space(8)]
 		public UIButton buttonResume;
@@ -30,13 +30,13 @@ namespace TDTK{
 		public override void Start(){ 
 			base.Start();
 			
-			if(sliderVolumeSFX!=null){
-				sliderVolumeSFX.value=AudioManager.GetVolumeSFX();
-				sliderVolumeSFX.onValueChanged.AddListener(delegate { OnSFXVolumeChanged(); });
+			if(sliderMusicVolume!=null){
+				sliderMusicVolume.value=AudioManager.GetVolumeSFX();
+				sliderMusicVolume.onValueChanged.AddListener(delegate { OnSFXVolumeChanged(); });
 			}
-			if(sliderVolumeUI!=null){
-				sliderVolumeUI.value=AudioManager.GetVolumeUI();
-				sliderVolumeUI.onValueChanged.AddListener(delegate { OnUIVolumeChanged(); });
+			if(sliderSFXVolume!=null){
+				sliderSFXVolume.value=AudioManager.GetVolumeUI();
+				sliderSFXVolume.onValueChanged.AddListener(delegate { OnUIVolumeChanged(); });
 			}
 			
 			buttonResume.Init();		buttonResume.button.onClick.AddListener(() => OnResumeButton());
@@ -69,10 +69,10 @@ namespace TDTK{
 		
 		
 		void OnSFXVolumeChanged(){
-			AudioManager.SetVolumeSFX(sliderVolumeSFX.value);
+			AudioManager.SetVolumeSFX(sliderMusicVolume.value);
 		}
 		void OnUIVolumeChanged(){
-			AudioManager.SetVolumeUI(sliderVolumeUI.value);
+			AudioManager.SetVolumeUI(sliderSFXVolume.value);
 		}
 		
 		

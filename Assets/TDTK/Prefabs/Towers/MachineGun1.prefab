@@ -1405,7 +1405,8 @@ MonoBehaviour:
   instanceID: -1
   unitName: MachineGun1
   icon: {fileID: 21300004, guid: d138993b3dd86764ba142a07cff82937, type: 3}
-  desp: Basic Bullet Tower that have low damage, but fast attack rate.
+  desp: 'Machinegun Tower - Level 1. Can attack just one target. Cooldown - 0.5s.
+    Damage between 3 - 4. '
   canBeAttacked: 1
   canBeTargeted: 1
   unitRadius: 0.5
@@ -1444,8 +1445,8 @@ MonoBehaviour:
     dmgReduc: 0
     critReduc: 0
     hit: 1
-    damageMin: 2
-    damageMax: 3
+    damageMin: 3
+    damageMax: 4
     attackRange: 10
     aoeRange: 0
     cooldown: 0.5
